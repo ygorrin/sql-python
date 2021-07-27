@@ -21,6 +21,7 @@ left join friendships on users.id = friendships.user_id
 left join users as user2 on friendships.friend_id = user2.id
 group by users.id
 order by count(user2.id) desc
+limit 1
 ;
 
 -- 4.Crea un nuevo usuario y hazlos amigos de Eli Byers, Kermit The Frog y Marky Mark.
